@@ -18,6 +18,7 @@ public class Main extends Distance{
     //method returns breaking distance
     public static float breakDistance(float velocity, String condition){ // velocity in m/s  In function- call: write weather condition or get weather data
 
+
 //        private double dry = 0.95;
 //        private double wet = 0.6;
 //        private double snow = 0.3;

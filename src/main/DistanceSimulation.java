@@ -20,7 +20,6 @@ public class DistanceSimulation extends Distance {
         return currentTime;
     }
 
-
     //this method is used for the ultrasound time- simulation
     public float time(float currentTime){
         double randomFactor = Math.random();
