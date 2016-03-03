@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileReading {
+public class FileReading implements SensorInterface{
     // defines variables
     BufferedReader br;
     StringBuilder sb;

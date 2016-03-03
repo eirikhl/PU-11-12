@@ -1,5 +1,7 @@
 package weatherBusiness;
 
+import main.SensorInterface;
+
 /**
  * Created by HallvardTiseth on 26.02.2016.
  */
@@ -7,7 +9,7 @@ package weatherBusiness;
 
 
 
-public class weatherToCoefficient {
+public class weatherToCoefficient implements SensorInterface{
 
     private float coefficient;
 

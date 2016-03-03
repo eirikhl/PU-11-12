@@ -1,11 +1,41 @@
 package main;
 
+import weatherBusiness.weatherToCoefficient;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
 /**
  * Created by marianaspas on 24.02.2016.
  */
-public class Main extends Distance{
+public class Main{
+    ArrayList<SensorInterface> sensors;
+    HashMap<SensorInterface, Float> values;
+    Distance d;
+    weatherToCoefficient w;
+    FileReading fr;
+
+    public void Main() throws FileNotFoundException {
+        sensors = new ArrayList<>();
+        d = new Distance();
+        w = new weatherToCoefficient();
+        fr = new FileReading("src/dataInput/downtown-crosstown.json");
+
+        sensors.add(d);
+        sensors.add(w);
+        sensors.add(fr);
+    }
 
     private static float startTime = (float)0.6; // a chosen time to start with
+
+    public void update(){
+        for(Iterator<SensorInterface> i = sensors.iterator(); i.hasNext();){
+            SensorInterface sensor = i.next();
+            sensor.update();
+        }
+    }
 
     public static void main(String [] args){
         DistanceSimulation distanceSimulation = new DistanceSimulation();
@@ -51,7 +81,8 @@ public class Main extends Distance{
 
     //calculates if the distance is safe, with respect to the weather condition and the velocity
     public static boolean isSafe(float velocity, float time, String condition ){
-        float distance = distance(time);
+        Distance dis = new Distance();
+        float distance = dis.distance(time);
         float breakingDistance = breakDistance(velocity, condition );
 
         if(distance > breakingDistance){

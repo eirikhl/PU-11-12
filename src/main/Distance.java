@@ -4,7 +4,7 @@ package main;
  * Created by marianaspas on 26.02.2016.
  */
 
-public class Distance {
+public class Distance implements SensorInterface{
 
     //the method takes in the distance measured in seconds (travel-time for the ultrasound) converts it into meters.
     public static float distance(float time){
@@ -13,4 +13,13 @@ public class Distance {
         return distance;
     }
 
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public float getData() {
+        return 0;
+    }
 }
