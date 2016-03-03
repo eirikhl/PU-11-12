@@ -9,7 +9,7 @@ import main.SensorInterface;
 
 
 
-public class weatherToCoefficient implements SensorInterface{
+public class WeatherToCoefficient implements SensorInterface{
 
     private float coefficient;
 
