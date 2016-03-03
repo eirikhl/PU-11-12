@@ -55,7 +55,7 @@ public class FileReading implements SensorInterface{
 
     // sets speed
     private void setData(float x){
-        speed = x;
+        speed = x/3.6f;
     }
 
     // returns the object's data (current vehicle_speed)

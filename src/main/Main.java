@@ -1,6 +1,6 @@
 package main;
 
-import weatherBusiness.weatherToCoefficient;
+import weatherBusiness.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,18 +14,23 @@ public class Main{
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
     Distance d;
-    weatherToCoefficient w;
+    WeatherToCoefficient w;
     FileReading fr;
 
-    public void Main() throws FileNotFoundException {
+    public Main(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
+        values = new HashMap<>();
         d = new Distance();
-        w = new weatherToCoefficient();
-        fr = new FileReading("src/dataInput/downtown-crosstown.json");
+        w = new WeatherToCoefficient();
+        fr = new FileReading(filename);
 
         sensors.add(d);
         sensors.add(w);
         sensors.add(fr);
+
+        values.put(d, 0.0f);
+        values.put(w, 0.0f);
+        values.put(fr, 0.0f);
     }
 
     private static float startTime = (float)0.6; // a chosen time to start with
@@ -34,60 +39,46 @@ public class Main{
         for(Iterator<SensorInterface> i = sensors.iterator(); i.hasNext();){
             SensorInterface sensor = i.next();
             sensor.update();
+            values.put(sensor, sensor.getData());
         }
     }
 
-    public static void main(String [] args){
-        DistanceSimulation distanceSimulation = new DistanceSimulation();
-        distanceSimulation.calculateDistance(startTime);
-        boolean safe = isSafe(15, startTime, "snow");
-        System.out.println("Is it safe to drive at this velocity: "+safe);
-
+    public static void main(String [] args) throws FileNotFoundException {
+        boolean safe = false;
+        Main m = new Main("src/dataInput/downtown-crosstown.json");
+        for(int i = 0; i < 350000; i++){
+            m.update();
+        }
+        safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
+        System.out.println(m.getVelocity());
+        System.out.println(m.getDistance());
+        System.out.println(safe);
     }
 
     //method returns breaking distance
-    public static float breakDistance(float velocity, String condition){ // velocity in m/s  In function- call: write weather condition or get weather data
-
-
-//        private double dry = 0.95;
-//        private double wet = 0.6;
-//        private double snow = 0.3;
-//        private double ice = 0.2;
-
-        double friction = 0;
+    public static float breakDistance(float velocity, float condition){ // velocity in m/s  In function- call: write weather condition or get weather data
         double gravity = 9.81;
-
-        switch (condition){
-            case "dry":
-                friction = 0.95;
-                break;
-            case "wet":
-                friction = 0.6;
-                break;
-            case "snow":
-                friction = 0.3;
-                break;
-            case "ice":
-                friction = 0.2;
-                break;
-            default:
-                System.out.println("Invalid condition");
-                break;
-        }
-
-        double breakingDistance = (velocity*velocity)/(2*friction*gravity);
+        double breakingDistance = (velocity*velocity)/(2*condition*gravity);
         return (float)breakingDistance;
     }
 
     //calculates if the distance is safe, with respect to the weather condition and the velocity
-    public static boolean isSafe(float velocity, float time, String condition ){
-        Distance dis = new Distance();
-        float distance = dis.distance(time);
+    public static boolean isSafe(float velocity, float distance, float condition ){
         float breakingDistance = breakDistance(velocity, condition );
 
         if(distance > breakingDistance){
             return true;
         }
         return false;
+    }
+
+    public float getDistance(){
+        return values.get(d);
+    }
+    public float getWeather(){
+        return values.get(w);
+    }
+    public float getVelocity(){
+        return values.get(fr);
     }
 }
