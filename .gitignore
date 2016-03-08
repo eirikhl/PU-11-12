@@ -1,1 +1,12 @@
-.idea/*
+
+###JetBrains template
+
+*.iml
+.idea/
+## Pluggin-specific files:
+# IntelliJ
+/out/
+
+#mpeltonen/
+.idea_modules/
+
