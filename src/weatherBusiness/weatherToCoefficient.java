@@ -43,6 +43,7 @@ public class WeatherToCoefficient implements SensorInterface{
 
     public float getData() {
         //URL url = new URL("http://www.yr.no/sted/Norge/postnummer/"+getPostalNumber()+"/varsel.xml");
+        /*
         setAuto(true);//for testing-purposes
         float weathercoefficient;
         if (auto) {
@@ -52,7 +53,8 @@ public class WeatherToCoefficient implements SensorInterface{
         }else{
             weathercoefficient = new UserInput().getInput();
         }
-        return weathercoefficient;
+        return weathercoefficient;*/
+        return this.coefficient;
     }
     public void update(){
 
