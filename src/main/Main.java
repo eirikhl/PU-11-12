@@ -33,7 +33,15 @@ public class Main{
         values.put(fr, 0.0f);
     }
 
-    private static float startTime = (float)0.6; // a chosen time to start with
+    public float getDistance(){
+        return values.get(d);
+    }
+    public float getWeather(){
+        return values.get(w);
+    }
+    public float getVelocity(){
+        return values.get(fr);
+    }
 
     public void update(){
         for (SensorInterface sensor : sensors) {
@@ -42,20 +50,9 @@ public class Main{
         }
     }
 
-    public static void main(String [] args) throws FileNotFoundException {
-        boolean safe;
-        Main m = new Main("src/dataInput/downtown-crosstown.json");
-        for(int i = 0; i < 350000; i++){
-            m.update();
-        }
-        safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
-        System.out.println(m.getVelocity());
-        System.out.println(m.getDistance());
-        System.out.println(safe);
-    }
-
     //method returns breaking distance
-    public static float breakDistance(float velocity, float condition){ // velocity in m/s  In function- call: write weather condition or get weather data
+    // velocity in m/s  In function- call: write weather condition or get weather data
+    public static float breakDistance(float velocity, float condition){
         double gravity = 9.81;
         double breakingDistance = (velocity*velocity)/(2*condition*gravity);
         return (float)breakingDistance;
@@ -68,13 +65,15 @@ public class Main{
         return distance > breakingDistance;
     }
 
-    public float getDistance(){
-        return values.get(d);
-    }
-    public float getWeather(){
-        return values.get(w);
-    }
-    public float getVelocity(){
-        return values.get(fr);
+    public static void main(String [] args) throws FileNotFoundException {
+        boolean safe;
+        Main m = new Main("src/dataInput/downtown-crosstown.json");
+        for(int i = 0; i < 355000; i++){
+            m.update();
+        }
+        safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
+        System.out.println(m.getVelocity());
+        System.out.println(m.getDistance());
+        System.out.println(safe);
     }
 }
