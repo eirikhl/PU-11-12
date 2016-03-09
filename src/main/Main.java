@@ -1,6 +1,6 @@
 package main;
 
-import weatherBusiness.WeatherToCoefficient;
+import weatherBusiness.weatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,14 +14,14 @@ public class Main{
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
     Distance d;
-    WeatherToCoefficient w;
+    weatherToCoefficient w;
     FileReading fr;
 
     public Main(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
         values = new HashMap<>();
         d = new Distance();
-        w = new WeatherToCoefficient();
+        w = new weatherToCoefficient();
         fr = new FileReading(filename);
 
         sensors.add(d);
@@ -43,11 +43,13 @@ public class Main{
         }
     }
 
-    public static void main(String [] args) throws FileNotFoundException {
+    public static void main(String [] args) throws FileNotFoundException, InterruptedException{
         boolean safe = false;
         Main m = new Main("src/dataInput/downtown-crosstown.json");
         for(int i = 0; i < 350000; i++){
             m.update();
+            Thread.sleep(25);
+
         }
         safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
         System.out.println(m.getVelocity());
