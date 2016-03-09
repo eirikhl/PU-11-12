@@ -1,4 +1,4 @@
-package main;
+package Sensors;
 
 public interface SensorInterface {
     void update();
