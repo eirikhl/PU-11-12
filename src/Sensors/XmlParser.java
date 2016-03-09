@@ -5,4 +5,5 @@ public class XmlParser {
     public float returncoefficient(String xml){
         return (float)0.5;
     }
+    //er gjort endring i
 }
