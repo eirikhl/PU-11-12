@@ -1,4 +1,4 @@
-package main;
+package Sensors;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,12 +10,14 @@ public class FileReading implements SensorInterface{
     BufferedReader br;
     StringBuilder sb;
     float speed;
+    String value;
 
     // constructor, allows for custom filename and gives the BufferedReader and StringBuilder variables
-    public FileReading(String filename) throws FileNotFoundException {
+    public FileReading(String filename, String value) throws FileNotFoundException {
         br = new BufferedReader(new FileReader(filename));
         sb = new StringBuilder();
         speed = -1;
+        this.value = value;
     }
 
     // updates the object's data
@@ -41,13 +43,13 @@ public class FileReading implements SensorInterface{
     }
 
     // converts a json line to float for vehicle_speed
-    public float getVehicleSpeed(String line){
+    private float getVehicleSpeed(String line){
         String jsonLine = line.replace("{","");
         jsonLine = jsonLine.replace("}","");
         jsonLine = jsonLine.replace("\"","");
         String[] partLine = jsonLine.split(",");
         String[] nameValue = partLine[0].split(":");
-        if(nameValue[1].equals("vehicle_speed")) {
+        if(nameValue[1].equals(value)) {
             return Float.parseFloat(partLine[1].split(":")[1]);
         }
         return -1;

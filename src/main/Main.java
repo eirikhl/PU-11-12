@@ -1,15 +1,15 @@
 package main;
 
-import weatherBusiness.WeatherToCoefficient;
+import Sensors.Distance;
+import Sensors.FileReading;
+import Sensors.SensorInterface;
+import Sensors.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/**
- * Created by marianaspas on 24.02.2016.
- */
 public class Main{
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
@@ -22,7 +22,7 @@ public class Main{
         values = new HashMap<>();
         d = new Distance();
         w = new WeatherToCoefficient();
-        fr = new FileReading(filename);
+        fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
 
         sensors.add(d);
         sensors.add(w);
@@ -36,15 +36,14 @@ public class Main{
     private static float startTime = (float)0.6; // a chosen time to start with
 
     public void update(){
-        for(Iterator<SensorInterface> i = sensors.iterator(); i.hasNext();){
-            SensorInterface sensor = i.next();
+        for (SensorInterface sensor : sensors) {
             sensor.update();
             values.put(sensor, sensor.getData());
         }
     }
 
     public static void main(String [] args) throws FileNotFoundException {
-        boolean safe = false;
+        boolean safe;
         Main m = new Main("src/dataInput/downtown-crosstown.json");
         for(int i = 0; i < 350000; i++){
             m.update();
@@ -66,10 +65,7 @@ public class Main{
     public static boolean isSafe(float velocity, float distance, float condition ){
         float breakingDistance = breakDistance(velocity, condition );
 
-        if(distance > breakingDistance){
-            return true;
-        }
-        return false;
+        return distance > breakingDistance;
     }
 
     public float getDistance(){

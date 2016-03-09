@@ -1,9 +1,9 @@
-package main;
+package Sensors;
 
 
 import java.util.Random;
 
-public class Distance implements SensorInterface{
+public class Distance implements SensorInterface {
     private float distance = 0;
     private float time = (float)0.1;
     //the method takes in the distance measured in seconds (travel-time for the ultrasound) converts it into meters.
