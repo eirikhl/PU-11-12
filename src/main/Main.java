@@ -8,7 +8,6 @@ import Sensors.WeatherToCoefficient;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class Main{
     ArrayList<SensorInterface> sensors;
