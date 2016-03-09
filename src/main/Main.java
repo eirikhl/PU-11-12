@@ -3,7 +3,6 @@ package main;
 import Sensors.Distance;
 import Sensors.FileReading;
 import Sensors.SensorInterface;
-import Sensors.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
