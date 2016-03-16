@@ -1,25 +1,27 @@
 package main;
 
-import weatherBusiness.weatherToCoefficient;
+import Sensors.Distance;
+import Sensors.FileReading;
+import Sensors.SensorInterface;
+import Sensors.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class Main{
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
     Distance d;
-    weatherToCoefficient w;
+    WeatherToCoefficient w;
     FileReading fr;
 
     public Main(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
         values = new HashMap<>();
         d = new Distance();
-        w = new weatherToCoefficient();
-        fr = new FileReading(filename);
+        w = new WeatherToCoefficient();
+        fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
 
         sensors.add(d);
         sensors.add(w);
@@ -30,11 +32,10 @@ public class Main{
         values.put(fr, 0.0f);
     }
 
-    private static float startTime = (float)0.6; // a chosen time to start with
+
 
     public void update(){
-        for(Iterator<SensorInterface> i = sensors.iterator(); i.hasNext();){
-            SensorInterface sensor = i.next();
+        for (SensorInterface sensor : sensors) {
             sensor.update();
             values.put(sensor, sensor.getData());
         }
@@ -45,6 +46,7 @@ public class Main{
         Main m = new Main("src/dataInput/downtown-crosstown.json");
         int i = 0;
         while(true){
+            i++;
             m.update();
             Thread.sleep(25);
             if(i%50 == 1){
@@ -60,7 +62,8 @@ public class Main{
     }
 
     //method returns breaking distance
-    public static float breakDistance(float velocity, float condition){ // velocity in m/s  In function- call: write weather condition or get weather data
+    // velocity in m/s  In function- call: write weather condition or get weather data
+    public static float breakDistance(float velocity, float condition){
         double gravity = 9.81;
         double breakingDistance = (velocity*velocity)/(2*condition*gravity);
         return (float)breakingDistance;
@@ -70,10 +73,7 @@ public class Main{
     public static boolean isSafe(float velocity, float distance, float condition ){
         float breakingDistance = breakDistance(velocity, condition );
 
-        if(distance > breakingDistance){
-            return true;
-        }
-        return false;
+        return distance > breakingDistance;
     }
 
     public float getDistance(){

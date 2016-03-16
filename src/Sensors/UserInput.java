@@ -1,10 +1,7 @@
-package weatherBusiness;
+package Sensors;
 
 import java.util.Scanner;
 
-/**
- * Created by TorMagne on 02.03.2016.
- */
 public class UserInput {
 
     //Gets user input and returns coefficient as float
