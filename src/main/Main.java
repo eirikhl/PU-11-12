@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/**
- * Created by marianaspas on 24.02.2016.
- */
 public class Main{
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
@@ -44,17 +41,22 @@ public class Main{
     }
 
     public static void main(String [] args) throws FileNotFoundException, InterruptedException{
-        boolean safe = false;
+        boolean safe;
         Main m = new Main("src/dataInput/downtown-crosstown.json");
-        for(int i = 0; i < 350000; i++){
+        int i = 0;
+        while(true){
             m.update();
             Thread.sleep(25);
-
+            if(i%50 == 1){
+                safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
+                if(! safe){
+                    System.out.println("You should break");
+                }
+            }
+            if(i >= 350000){
+                break;
+            }
         }
-        safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
-        System.out.println(m.getVelocity());
-        System.out.println(m.getDistance());
-        System.out.println(safe);
     }
 
     //method returns breaking distance
