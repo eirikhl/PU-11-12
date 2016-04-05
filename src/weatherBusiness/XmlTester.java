@@ -42,9 +42,9 @@ public class XmlTester {
          
         //String weatherXml = xml.getURLContent("http://www.yr.no/sted/Norge/postnummer/" + 7037 + "/varsel.xml");
         File f = new File("XmlTest");
-        String weatherXml = f.
+        String weatherXml = f;
         System.out.println(weatherXml);
-        System.out.println(XmlTester.prettyFormat());
+        //System.out.println(XmlTester.prettyFormat());
         */
     }
 }
