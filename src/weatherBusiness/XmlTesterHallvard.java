@@ -13,13 +13,14 @@ public class XmlTesterHallvard {
     public static void main(String[] args) {
 
         try {
-            File inputFile = new File("varsel.xml");
+            File inputFile = new File("D:\\Documents\\TDT4140 - PU\\IJ\\PU-11-12\\src\\weatherBusiness\\varsel.xml");
             DocumentBuilderFactory dbFactory
                     = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
-
+            NodeList nList = doc.getElementsByTagName("time");
+            System.out.println(nList.getLength());
         } catch (Exception e) {
             e.printStackTrace();
         }
