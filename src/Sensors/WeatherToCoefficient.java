@@ -17,8 +17,32 @@ public class WeatherToCoefficient implements SensorInterface{
         this.auto = auto;
     }
 
-    private void setCoefficient(float co){
-        coefficient = co;
+    private void setCoefficient(float pre, float temp){
+        //Starts with 0.8 as it's the standard coefficient for summer driving
+        float temporaryCo = 0.8f;
+        //Uses precipitation to potentially subtract from coefficient
+        if (temp >= 0.0f){
+            if(pre > 4.2f){
+                temporaryCo -= 0.4f;
+            }
+            else if(pre >1.6f){
+                temporaryCo -= 0.2f;
+            }
+            else if (pre > 0.0f){
+                temporaryCo -= 0.1f;
+            }
+        }
+        else{
+            temporaryCo = 0.4f;
+            if(temp < -10.0f){
+                temporaryCo -= 0.2f;
+            }
+            else if (temp < -5.0f){
+                temporaryCo -= 0.1f;
+            }
+        }
+
+        coefficient = temporaryCo;
     }
 
     public void update(){
