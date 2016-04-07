@@ -32,20 +32,32 @@ public class Main{
         values.put(fr, 0.0f);
     }
 
-    public float getDistance(){
-        return values.get(d);
-    }
-    public float getWeather(){
-        return values.get(w);
-    }
-    public float getVelocity(){
-        return values.get(fr);
-    }
+
 
     public void update(){
         for (SensorInterface sensor : sensors) {
             sensor.update();
             values.put(sensor, sensor.getData());
+        }
+    }
+
+    public static void main(String [] args) throws FileNotFoundException, InterruptedException{
+        boolean safe;
+        Main m = new Main("src/dataInput/downtown-crosstown.json");
+        int i = 0;
+        while(true){
+            i++;
+            m.update();
+            Thread.sleep(25);
+            if(i%50 == 1){
+                safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
+                if(! safe){
+                    System.out.println("You should break");
+                }
+            }
+            if(i >= 350000){
+                break;
+            }
         }
     }
 
@@ -64,15 +76,13 @@ public class Main{
         return distance > breakingDistance;
     }
 
-    public static void main(String [] args) throws FileNotFoundException {
-        boolean safe;
-        Main m = new Main("src/dataInput/downtown-crosstown.json");
-        for(int i = 0; i < 355000; i++){
-            m.update();
-        }
-        safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
-        System.out.println(m.getVelocity());
-        System.out.println(m.getDistance());
-        System.out.println(safe);
+    public float getDistance(){
+        return values.get(d);
+    }
+    public float getWeather(){
+        return values.get(w);
+    }
+    public float getVelocity(){
+        return values.get(fr);
     }
 }
