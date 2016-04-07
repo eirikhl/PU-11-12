@@ -39,6 +39,7 @@ public class WeatherToCoefficient implements SensorInterface{
             }
         }
         else{
+            //If temperature is low enough, then rain doesn't matter too much
             temporaryCo = 0.4f;
             if(temp < -10.0f){
                 temporaryCo = 0.2f;
@@ -57,17 +58,6 @@ public class WeatherToCoefficient implements SensorInterface{
             ticks = 0;
             //setCoefficient(parser.parse()); Må fikses når xmlparser er ferdig
         }
-        // URL url = new URL("http://www.yr.no/sted/Norge/postnummer/"+getPostalNumber()+"/varsel.xml");
-//        setAuto(true);//for testing-purposes
-//        float weathercoefficient;
-//        if (auto) {
-//            XmlDownload xml = new XmlDownload();
-//            String weatherXml = xml.getURLContent("http://www.yr.no/sted/Norge/postnummer/" + postalNumber + "/varsel.xml");
-//            weathercoefficient = new XmlParser().returncoefficient(weatherXml);
-//        }else{
-//            weathercoefficient = new UserInput().getInput();
-//        }
-//        setCoefficient(weathercoefficient);
     }
 
     public float getData() {
