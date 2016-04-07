@@ -52,6 +52,8 @@ public class XmlParser {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            float[] l = {-1f,-1f};
+            return l;
         } catch (XPathExpressionException e) {
             e.printStackTrace();
         } catch (SAXException e) {

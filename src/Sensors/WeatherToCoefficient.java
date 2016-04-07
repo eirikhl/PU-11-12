@@ -33,25 +33,30 @@ public class WeatherToCoefficient implements SensorInterface{
         float pre = weather[1];
         float temporaryCo = 0.8f;
         //Uses precipitation to potentially subtract from coefficient
-        if (temp >= 2.0f){
-            if(pre > 4.2f){
-                temporaryCo = 0.4f;
-            }
-            else if(pre > 1.6f){
-                temporaryCo = 0.6f;
-            }
-            else if (pre > 0.0f){
-                temporaryCo = 0.7f;
-            }
+        if(pre == -1f){
+            temporaryCo = 0.8f;
         }
         else{
-            //If temperature is low enough, then rain doesn't matter too much
-            temporaryCo = 0.4f;
-            if(temp < -10.0f){
-                temporaryCo = 0.2f;
+            if (temp >= 2.0f){
+                if(pre > 4.2f){
+                    temporaryCo = 0.4f;
+                }
+                else if(pre > 1.6f){
+                    temporaryCo = 0.6f;
+                }
+                else if (pre > 0.0f){
+                    temporaryCo = 0.7f;
+                }
             }
-            else if (temp < -5.0f){
-                temporaryCo = 0.3f;
+            else{
+                //If temperature is low enough, then rain doesn't matter too much
+                temporaryCo = 0.4f;
+                if(temp < -10.0f){
+                    temporaryCo = 0.2f;
+                }
+                else if (temp < -5.0f){
+                    temporaryCo = 0.3f;
+                }
             }
         }
 
