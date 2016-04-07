@@ -1,25 +1,32 @@
 package main;
 
-import Sensors.Distance;
-import Sensors.FileReading;
-import Sensors.SensorInterface;
-import Sensors.WeatherToCoefficient;
+import src.Sensors.DistanceMonitor;
+import src.Sensors.FileReading;
+import src.Sensors.SensorInterface;
+import src.Sensors.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Main{
+import com.pi4j.io.gpio.GpioController;
+import com.pi4j.io.gpio.GpioFactory;
+import com.pi4j.io.gpio.GpioPinDigitalInput;
+import com.pi4j.io.gpio.GpioPinDigitalOutput;
+import com.pi4j.io.gpio.Pin;
+import com.pi4j.io.gpio.RaspiPin;
+
+public class Penguin {
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
-    Distance d;
+    DistanceMonitor d;
     WeatherToCoefficient w;
     FileReading fr;
 
-    public Main(String filename) throws FileNotFoundException {
+    public Penguin(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
         values = new HashMap<>();
-        d = new Distance();
+        d = new DistanceMonitor(RaspiPin.GPIO_00, RaspiPin.GPIO_07);
         w = new WeatherToCoefficient();
         fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
 
@@ -43,7 +50,7 @@ public class Main{
 
     public static void main(String [] args) throws FileNotFoundException, InterruptedException{
         boolean safe;
-        Main m = new Main("src/dataInput/downtown-crosstown.json");
+        Penguin m = new Penguin("src/dataInput/downtown-crosstown.json");
         int i = 0;
         while(true){
             i++;

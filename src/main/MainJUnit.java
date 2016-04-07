@@ -7,10 +7,10 @@ import java.io.FileNotFoundException;
 import static org.junit.Assert.*;
 
 public class MainJUnit {
-    Main m;
+    Penguin m;
 
     public MainJUnit() throws FileNotFoundException {
-        m = new Main("src/dataInput/downtown-crosstown.json");
+        m = new Penguin("src/dataInput/downtown-crosstown.json");
     }
 
     @Test

@@ -37,7 +37,7 @@ package Sensors;
 
         private float distanceInCm;
 
-        private DistanceMonitor( Pin echoPin, Pin trigPin ) {
+        public DistanceMonitor( Pin echoPin, Pin trigPin ) {
             this.echoPin = gpio.provisionDigitalInputPin( echoPin );
             this.trigPin = gpio.provisionDigitalOutputPin( trigPin );
             this.trigPin.low();
@@ -108,11 +108,11 @@ package Sensors;
         }
 
         public void update() {
-            Pin echoPin = RaspiPin.GPIO_00; // PI4J custom numbering (pin 11)
-            Pin trigPin = RaspiPin.GPIO_07; // PI4J custom numbering (pin 7)
-            DistanceMonitor monitor = new DistanceMonitor( echoPin, trigPin );
+            //Pin echoPin = RaspiPin.GPIO_00; // PI4J custom numbering (pin 11)
+            //Pin trigPin = RaspiPin.GPIO_07; // PI4J custom numbering (pin 7)
+            //DistanceMonitor monitor = new DistanceMonitor( echoPin, trigPin );
             try {
-                distanceInCm = monitor.measureDistance();
+                distanceInCm = measureDistance();
                 // System.out.printf( "%1$d,%2$.3f%n", System.currentTimeMillis(), monitor.measureDistance() );
             }
             catch( TimeoutException e ) {
@@ -148,4 +148,4 @@ package Sensors;
 
     }
 
-}
+
