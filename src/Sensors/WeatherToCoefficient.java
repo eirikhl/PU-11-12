@@ -2,15 +2,18 @@ package Sensors;
 
 //https://no.wikipedia.org/wiki/Friksjon
 
+import java.io.IOException;
+
 public class WeatherToCoefficient implements SensorInterface{
     private float coefficient;
     private boolean auto; // settes når bruker velger om koeffisienten skal settet automatisk (basert på værmelding) eller manuelt
     private int postalNumber;
 
     @SuppressWarnings("OctalInteger")
-    public WeatherToCoefficient(){
-        postalNumber = 0000;
+    public WeatherToCoefficient() throws IOException {
+        postalNumber = 7034;
         coefficient = 0.8f;
+        XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
     }
 
     public void setAuto(boolean auto) {
