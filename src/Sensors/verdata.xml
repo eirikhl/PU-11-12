@@ -1,45 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weatherdata>
   <location>
-    <name>7037 Trondheim</name>
+    <name>7034 Trondheim</name>
     <type>Poststed</type>
     <country>Norge</country>
     <timezone id="Europe/Oslo" utcoffsetMinutes="120" />
-    <location altitude="45" latitude="63.397184" longitude="10.408775" geobase="postnummer" geobaseid="7037" />
+    <location altitude="51" latitude="63.4167" longitude="10.4055" geobase="postnummer" geobaseid="7034" />
   </location>
   <credit>
     <!--For å bruke gratis værdata fra yr.no, MÅ du vise følgende tekst godt synlig på nettsiden din. Teksten skal være en lenke til URL-en som er spesifisert.-->
     <!--Les mer om vilkår for bruk av gratis værdata + retningslinjer på 
 http://om.yr.no/verdata/ -->
-    <link text="Værvarsel fra yr.no, levert av NRK og Meteorologisk institutt" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/" />
+    <link text="Værvarsel fra yr.no, levert av NRK og Meteorologisk institutt" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/" />
   </credit>
   <links>
-    <link id="xmlSource" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/varsel.xml" />
-    <link id="xmlSourceHourByHour" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/varsel_time_for_time.xml" />
-    <link id="overview" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/" />
-    <link id="hourByHour" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/time_for_time.html" />
-    <link id="longTermForecast" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/langtidsvarsel.html" />
-    <link id="radar" url="http://www.yr.no/sted/Norge/Postnummer/7037_Trondheim/radar.html" />
+    <link id="xmlSource" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/varsel.xml" />
+    <link id="xmlSourceHourByHour" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/varsel_time_for_time.xml" />
+    <link id="overview" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/" />
+    <link id="hourByHour" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/time_for_time.html" />
+    <link id="longTermForecast" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/langtidsvarsel.html" />
+    <link id="radar" url="http://www.yr.no/sted/Norge/Postnummer/7034_Trondheim/radar.html" />
   </links>
   <meta>
-    <lastupdate>2016-04-06T10:39:49</lastupdate>
-    <nextupdate>2016-04-06T12:00:00</nextupdate>
+    <lastupdate>2016-04-07T10:43:11</lastupdate>
+    <nextupdate>2016-04-07T12:00:00</nextupdate>
   </meta>
-  <sun rise="2016-04-06T06:19:39" set="2016-04-06T20:23:32" />
+  <sun rise="2016-04-07T06:16:10" set="2016-04-07T20:26:30" />
   <forecast>
     <text>
-      <location name="7037 Trondheim">
-        <time from="2016-04-06" to="2016-04-06">
-          <title>onsdag</title>
-          <body>&lt;strong&gt;Trøndelag:&lt;/strong&gt; Bris av skiftende retning, etter hvert nordvestlig på kysten. Skyet, enkelte regnbyger, vesentlig om ettermiddagen og kvelden. &lt;strong&gt;Møre og Romsdal og Trøndelag:&lt;/strong&gt; Skiftende bris, på kysten nordlig bris. Skyet, litt regn. Lokal tåke.</body>
-        </time>
+      <location name="7034 Trondheim">
         <time from="2016-04-07" to="2016-04-07">
           <title>torsdag</title>
-          <body>&lt;strong&gt;Trøndelag:&lt;/strong&gt; Nordvest bris, frå torsdag ettermiddag nordvest liten kuling 12 m/s. Skya, regnbyer, snøbyer i høgda.</body>
+          <body>&lt;strong&gt;Trøndelag:&lt;/strong&gt; Nordvest til dels frisk bris på kysten, i kveld dreiende vestlig. For det meste skyet. Regnbyger, snøbyger over ca 600 meter.</body>
         </time>
         <time from="2016-04-08" to="2016-04-08">
           <title>fredag</title>
-          <body>&lt;strong&gt;Vestlandet og Trøndelag:&lt;/strong&gt; Bris fra skiftende retning. Litt regn, snø i fjellet.</body>
+          <body>&lt;strong&gt;Trøndelag:&lt;/strong&gt; Nordvest frisk bris, dreiende vestlig. For det meste skyet. Regnbyger, snøbyger i høyere strøk. &lt;strong&gt;Vestlandet og Trøndelag:&lt;/strong&gt; Bris fra skiftende retning. Litt regn, snø i fjellet.</body>
         </time>
         <time from="2016-04-09" to="2016-04-10">
           <title>lørdag og søndag</title>
@@ -48,370 +44,380 @@ http://om.yr.no/verdata/ -->
       </location>
     </text>
     <tabular>
-      <time from="2016-04-06T12:00:00" to="2016-04-06T18:00:00" period="2">
-        <!-- Valid from 2016-04-06T12:00:00 to 2016-04-06T18:00:00 -->
-        <symbol> number="2" numberEx="2" name="Lettskyet" var="02d"</symbol>
+      <time from="2016-04-07T11:00:00" to="2016-04-07T12:00:00" period="1">
+        <!-- Valid from 2016-04-07T11:00:00 to 2016-04-07T12:00:00 -->
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
-        <!-- Valid at 2016-04-06T12:00:00 -->
-        <windDirection deg="352.5" code="N" name="Nord" />
-        <windSpeed mps="2.4" name="Svak vind" />
-        <temperature unit="celsius" value="7" />
-        <pressure unit="hPa" value="993.4" />
-      </time>
-      <time from="2016-04-06T18:00:00" to="2016-04-07T00:00:00" period="3">
-        <!-- Valid from 2016-04-06T18:00:00 to 2016-04-07T00:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.96" />
-        <precipitation value="0" minvalue="0" maxvalue="0.2" />
-        <!-- Valid at 2016-04-06T18:00:00 -->
-        <windDirection deg="338.8" code="NNW" name="Nord-nordvest" />
-        <windSpeed mps="2.8" name="Svak vind" />
-        <temperature unit="celsius" value="9" />
-        <pressure unit="hPa" value="990.7" />
-      </time>
-      <time from="2016-04-07T00:00:00" to="2016-04-07T06:00:00" period="0">
-        <!-- Valid from 2016-04-07T00:00:00 to 2016-04-07T06:00:00 -->
-        <symbol number="4" numberEx="4" name="Skyet" var="04" />
-        <precipitation value="0" minvalue="0" maxvalue="0.3" />
-        <!-- Valid at 2016-04-07T00:00:00 -->
-        <windDirection deg="198.8" code="SSW" name="Sør-sørvest" />
-        <windSpeed mps="2.8" name="Svak vind" />
-        <temperature unit="celsius" value="3" />
-        <pressure unit="hPa" value="992.1" />
-      </time>
-      <time from="2016-04-07T06:00:00" to="2016-04-07T12:00:00" period="1">
-        <!-- Valid from 2016-04-07T06:00:00 to 2016-04-07T12:00:00 -->
-        <symbol number="4" numberEx="4" name="Skyet" var="04" />
-        <precipitation value="0" minvalue="0" maxvalue="0.6" />
-        <!-- Valid at 2016-04-07T06:00:00 -->
-        <windDirection deg="202.6" code="SSW" name="Sør-sørvest" />
-        <windSpeed mps="3.9" name="Lett bris" />
-        <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="992.8" />
+        <!-- Valid at 2016-04-07T11:00:00 -->
+        <windDirection deg="281.4" code="WNW" name="Vest-nordvest" />
+        <windSpeed mps="3.3" name="Svak vind" />
+        <temperature unit="celsius" value="6" />
+        <pressure unit="hPa" value="995.0" />
       </time>
       <time from="2016-04-07T12:00:00" to="2016-04-07T18:00:00" period="2">
         <!-- Valid from 2016-04-07T12:00:00 to 2016-04-07T18:00:00 -->
         <symbol number="4" numberEx="4" name="Skyet" var="04" />
-        <precipitation value="0" minvalue="0" maxvalue="0.5" />
+        <precipitation value="0" minvalue="0" maxvalue="0.3" />
         <!-- Valid at 2016-04-07T12:00:00 -->
-        <windDirection deg="288.4" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="3.2" name="Svak vind" />
-        <temperature unit="celsius" value="6" />
-        <pressure unit="hPa" value="994.6" />
+        <windDirection deg="288.7" code="WNW" name="Vest-nordvest" />
+        <windSpeed mps="3.8" name="Lett bris" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="995.1" />
       </time>
       <time from="2016-04-07T18:00:00" to="2016-04-08T00:00:00" period="3">
         <!-- Valid from 2016-04-07T18:00:00 to 2016-04-08T00:00:00 -->
         <symbol number="4" numberEx="4" name="Skyet" var="04" />
-        <precipitation value="0" minvalue="0" maxvalue="1.1" />
+        <precipitation value="0" minvalue="0" maxvalue="0.3" />
         <!-- Valid at 2016-04-07T18:00:00 -->
-        <windDirection deg="299.9" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="3.6" name="Lett bris" />
+        <windDirection deg="303.3" code="WNW" name="Vest-nordvest" />
+        <windSpeed mps="4.5" name="Lett bris" />
         <temperature unit="celsius" value="6" />
-        <pressure unit="hPa" value="996.0" />
+        <pressure unit="hPa" value="997.2" />
       </time>
       <time from="2016-04-08T00:00:00" to="2016-04-08T06:00:00" period="0">
         <!-- Valid from 2016-04-08T00:00:00 to 2016-04-08T06:00:00 -->
         <symbol number="4" numberEx="4" name="Skyet" var="04" />
-        <precipitation value="0" minvalue="0" maxvalue="0.2" />
+        <precipitation value="0" minvalue="0" maxvalue="0.9" />
         <!-- Valid at 2016-04-08T00:00:00 -->
-        <windDirection deg="288.5" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="3.1" name="Svak vind" />
-        <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="997.8" />
+        <windDirection deg="224.2" code="SW" name="Sørvest" />
+        <windSpeed mps="4.0" name="Lett bris" />
+        <temperature unit="celsius" value="3" />
+        <pressure unit="hPa" value="999.4" />
       </time>
       <time from="2016-04-08T06:00:00" to="2016-04-08T12:00:00" period="1">
         <!-- Valid from 2016-04-08T06:00:00 to 2016-04-08T12:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
-        <precipitation value="0" minvalue="0" maxvalue="0.1" />
+        <precipitation value="0" minvalue="0" maxvalue="0.4" />
         <!-- Valid at 2016-04-08T06:00:00 -->
-        <windDirection deg="213.2" code="SSW" name="Sør-sørvest" />
-        <windSpeed mps="4.4" name="Lett bris" />
+        <windDirection deg="213.9" code="SW" name="Sørvest" />
+        <windSpeed mps="4.1" name="Lett bris" />
         <temperature unit="celsius" value="2" />
-        <pressure unit="hPa" value="998.2" />
+        <pressure unit="hPa" value="999.7" />
       </time>
       <time from="2016-04-08T12:00:00" to="2016-04-08T18:00:00" period="2">
         <!-- Valid from 2016-04-08T12:00:00 to 2016-04-08T18:00:00 -->
         <symbol number="5" numberEx="40" name="Lette regnbyger" var="40d" />
-        <precipitation value="0.5" minvalue="0.1" maxvalue="1.2" />
+        <precipitation value="0.6" minvalue="0.1" maxvalue="2.0" />
         <!-- Valid at 2016-04-08T12:00:00 -->
-        <windDirection deg="240.2" code="WSW" name="Vest-sørvest" />
-        <windSpeed mps="5.4" name="Lett bris" />
+        <windDirection deg="235.4" code="SW" name="Sørvest" />
+        <windSpeed mps="4.0" name="Lett bris" />
         <temperature unit="celsius" value="5" />
-        <pressure unit="hPa" value="999.0" />
+        <pressure unit="hPa" value="999.8" />
       </time>
       <time from="2016-04-08T18:00:00" to="2016-04-09T00:00:00" period="3">
         <!-- Valid from 2016-04-08T18:00:00 to 2016-04-09T00:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.03" />
-        <precipitation value="0" minvalue="0" maxvalue="0.7" />
+        <precipitation value="0" minvalue="0" maxvalue="0.2" />
         <!-- Valid at 2016-04-08T18:00:00 -->
-        <windDirection deg="285.3" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="2.4" name="Svak vind" />
-        <temperature unit="celsius" value="5" />
-        <pressure unit="hPa" value="999.8" />
+        <windDirection deg="213.3" code="SSW" name="Sør-sørvest" />
+        <windSpeed mps="4.0" name="Lett bris" />
+        <temperature unit="celsius" value="3" />
+        <pressure unit="hPa" value="1000.4" />
       </time>
-      <time from="2016-04-09T02:00:00" to="2016-04-09T08:00:00" period="0">
-        <!-- Valid from 2016-04-09T02:00:00 to 2016-04-09T08:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.07" />
+      <time from="2016-04-09T00:00:00" to="2016-04-09T06:00:00" period="0">
+        <!-- Valid from 2016-04-09T00:00:00 to 2016-04-09T06:00:00 -->
+        <symbol number="1" numberEx="1" name="Klarvær" var="mf/01n.07" />
         <precipitation value="0" />
-        <!-- Valid at 2016-04-09T02:00:00 -->
-        <windDirection deg="185.9" code="S" name="Sør" />
-        <windSpeed mps="3.3" name="Svak vind" />
+        <!-- Valid at 2016-04-09T00:00:00 -->
+        <windDirection deg="197.4" code="SSW" name="Sør-sørvest" />
+        <windSpeed mps="4.0" name="Lett bris" />
         <temperature unit="celsius" value="1" />
-        <pressure unit="hPa" value="1002.4" />
+        <pressure unit="hPa" value="1002.0" />
       </time>
-      <time from="2016-04-09T08:00:00" to="2016-04-09T14:00:00" period="1">
-        <!-- Valid from 2016-04-09T08:00:00 to 2016-04-09T14:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
-        <precipitation value="0" />
-        <!-- Valid at 2016-04-09T08:00:00 -->
-        <windDirection deg="188.2" code="S" name="Sør" />
-        <windSpeed mps="1.3" name="Flau vind" />
-        <temperature unit="celsius" value="2" />
-        <pressure unit="hPa" value="1004.0" />
-      </time>
-      <time from="2016-04-09T14:00:00" to="2016-04-09T20:00:00" period="2">
-        <!-- Valid from 2016-04-09T14:00:00 to 2016-04-09T20:00:00 -->
+      <time from="2016-04-09T06:00:00" to="2016-04-09T12:00:00" period="1">
+        <!-- Valid from 2016-04-09T06:00:00 to 2016-04-09T12:00:00 -->
         <symbol number="2" numberEx="2" name="Lettskyet" var="02d" />
         <precipitation value="0" />
-        <!-- Valid at 2016-04-09T14:00:00 -->
-        <windDirection deg="122.2" code="ESE" name="Øst-sørøst" />
-        <windSpeed mps="1.3" name="Flau vind" />
-        <temperature unit="celsius" value="8" />
-        <pressure unit="hPa" value="1006.5" />
+        <!-- Valid at 2016-04-09T06:00:00 -->
+        <windDirection deg="192.9" code="SSW" name="Sør-sørvest" />
+        <windSpeed mps="3.8" name="Lett bris" />
+        <temperature unit="celsius" value="0" />
+        <pressure unit="hPa" value="1003.7" />
       </time>
-      <time from="2016-04-09T20:00:00" to="2016-04-10T02:00:00" period="3">
-        <!-- Valid from 2016-04-09T20:00:00 to 2016-04-10T02:00:00 -->
-        <symbol number="2" numberEx="2" name="Lettskyet" var="mf/02n.07" />
+      <time from="2016-04-09T12:00:00" to="2016-04-09T18:00:00" period="2">
+        <!-- Valid from 2016-04-09T12:00:00 to 2016-04-09T18:00:00 -->
+        <symbol number="2" numberEx="2" name="Lettskyet" var="02d" />
         <precipitation value="0" />
-        <!-- Valid at 2016-04-09T20:00:00 -->
-        <windDirection deg="6.7" code="N" name="Nord" />
-        <windSpeed mps="1.4" name="Flau vind" />
-        <temperature unit="celsius" value="7" />
-        <pressure unit="hPa" value="1008.8" />
+        <!-- Valid at 2016-04-09T12:00:00 -->
+        <windDirection deg="206.3" code="SSW" name="Sør-sørvest" />
+        <windSpeed mps="2.2" name="Svak vind" />
+        <temperature unit="celsius" value="6" />
+        <pressure unit="hPa" value="1006.6" />
+      </time>
+      <time from="2016-04-09T18:00:00" to="2016-04-10T00:00:00" period="3">
+        <!-- Valid from 2016-04-09T18:00:00 to 2016-04-10T00:00:00 -->
+        <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.07" />
+        <precipitation value="0" />
+        <!-- Valid at 2016-04-09T18:00:00 -->
+        <windDirection deg="314.1" code="NW" name="Nordvest" />
+        <windSpeed mps="0.9" name="Flau vind" />
+        <temperature unit="celsius" value="8" />
+        <pressure unit="hPa" value="1009.1" />
       </time>
       <time from="2016-04-10T02:00:00" to="2016-04-10T08:00:00" period="0">
         <!-- Valid from 2016-04-10T02:00:00 to 2016-04-10T08:00:00 -->
-        <symbol number="2" numberEx="2" name="Lettskyet" var="mf/02n.10" />
+        <symbol number="1" numberEx="1" name="Klarvær" var="mf/01n.10" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-10T02:00:00 -->
-        <windDirection deg="155.0" code="SSE" name="Sør-sørøst" />
-        <windSpeed mps="1.2" name="Flau vind" />
-        <temperature unit="celsius" value="3" />
-        <pressure unit="hPa" value="1011.7" />
+        <windDirection deg="208.2" code="SSW" name="Sør-sørvest" />
+        <windSpeed mps="1.5" name="Flau vind" />
+        <temperature unit="celsius" value="2" />
+        <pressure unit="hPa" value="1014.8" />
       </time>
       <time from="2016-04-10T08:00:00" to="2016-04-10T14:00:00" period="1">
         <!-- Valid from 2016-04-10T08:00:00 to 2016-04-10T14:00:00 -->
-        <symbol number="2" numberEx="2" name="Lettskyet" var="02d" />
+        <symbol number="1" numberEx="1" name="Klarvær" var="01d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-10T08:00:00 -->
-        <windDirection deg="112.6" code="ESE" name="Øst-sørøst" />
-        <windSpeed mps="1.0" name="Flau vind" />
-        <temperature unit="celsius" value="2" />
-        <pressure unit="hPa" value="1014.2" />
+        <windDirection deg="127.9" code="SE" name="Sørøst" />
+        <windSpeed mps="1.2" name="Flau vind" />
+        <temperature unit="celsius" value="3" />
+        <pressure unit="hPa" value="1016.7" />
       </time>
       <time from="2016-04-10T14:00:00" to="2016-04-10T20:00:00" period="2">
         <!-- Valid from 2016-04-10T14:00:00 to 2016-04-10T20:00:00 -->
         <symbol number="1" numberEx="1" name="Klarvær" var="01d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-10T14:00:00 -->
-        <windDirection deg="59.5" code="ENE" name="Øst-nordøst" />
-        <windSpeed mps="1.9" name="Svak vind" />
-        <temperature unit="celsius" value="10" />
-        <pressure unit="hPa" value="1015.7" />
+        <windDirection deg="24.4" code="NNE" name="Nord-nordøst" />
+        <windSpeed mps="1.1" name="Flau vind" />
+        <temperature unit="celsius" value="9" />
+        <pressure unit="hPa" value="1018.5" />
       </time>
       <time from="2016-04-10T20:00:00" to="2016-04-11T02:00:00" period="3">
         <!-- Valid from 2016-04-10T20:00:00 to 2016-04-11T02:00:00 -->
         <symbol number="2" numberEx="2" name="Lettskyet" var="mf/02n.10" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-10T20:00:00 -->
-        <windDirection deg="54.0" code="NE" name="Nordøst" />
-        <windSpeed mps="2.7" name="Svak vind" />
+        <windDirection deg="45.1" code="NE" name="Nordøst" />
+        <windSpeed mps="1.7" name="Svak vind" />
         <temperature unit="celsius" value="8" />
-        <pressure unit="hPa" value="1016.4" />
+        <pressure unit="hPa" value="1019.6" />
       </time>
       <time from="2016-04-11T02:00:00" to="2016-04-11T08:00:00" period="0">
         <!-- Valid from 2016-04-11T02:00:00 to 2016-04-11T08:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.13" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-11T02:00:00 -->
-        <windDirection deg="79.3" code="E" name="Øst" />
-        <windSpeed mps="1.6" name="Svak vind" />
-        <temperature unit="celsius" value="3" />
-        <pressure unit="hPa" value="1019.0" />
+        <windDirection deg="118.5" code="ESE" name="Øst-sørøst" />
+        <windSpeed mps="1.2" name="Flau vind" />
+        <temperature unit="celsius" value="4" />
+        <pressure unit="hPa" value="1022.2" />
       </time>
       <time from="2016-04-11T08:00:00" to="2016-04-11T14:00:00" period="1">
         <!-- Valid from 2016-04-11T08:00:00 to 2016-04-11T14:00:00 -->
-        <symbol number="1" numberEx="1" name="Klarvær" var="01d" />
+        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-11T08:00:00 -->
-        <windDirection deg="126.3" code="SE" name="Sørøst" />
-        <windSpeed mps="1.3" name="Flau vind" />
-        <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1020.6" />
+        <windDirection deg="182.3" code="S" name="Sør" />
+        <windSpeed mps="1.0" name="Flau vind" />
+        <temperature unit="celsius" value="3" />
+        <pressure unit="hPa" value="1023.1" />
       </time>
       <time from="2016-04-11T14:00:00" to="2016-04-11T20:00:00" period="2">
         <!-- Valid from 2016-04-11T14:00:00 to 2016-04-11T20:00:00 -->
-        <symbol number="1" numberEx="1" name="Klarvær" var="01d" />
+        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-11T14:00:00 -->
-        <windDirection deg="265.6" code="W" name="Vest" />
-        <windSpeed mps="1.3" name="Flau vind" />
-        <temperature unit="celsius" value="11" />
-        <pressure unit="hPa" value="1021.2" />
+        <windDirection deg="281.4" code="WNW" name="Vest-nordvest" />
+        <windSpeed mps="1.4" name="Flau vind" />
+        <temperature unit="celsius" value="9" />
+        <pressure unit="hPa" value="1022.5" />
       </time>
       <time from="2016-04-11T20:00:00" to="2016-04-12T02:00:00" period="3">
         <!-- Valid from 2016-04-11T20:00:00 to 2016-04-12T02:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.13" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-11T20:00:00 -->
-        <windDirection deg="272.0" code="W" name="Vest" />
+        <windDirection deg="322.8" code="NW" name="Nordvest" />
         <windSpeed mps="2.0" name="Svak vind" />
-        <temperature unit="celsius" value="9" />
-        <pressure unit="hPa" value="1020.8" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1023.0" />
       </time>
       <time from="2016-04-12T02:00:00" to="2016-04-12T08:00:00" period="0">
         <!-- Valid from 2016-04-12T02:00:00 to 2016-04-12T08:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.17" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-12T02:00:00 -->
-        <windDirection deg="275.8" code="W" name="Vest" />
+        <windDirection deg="261.5" code="W" name="Vest" />
         <windSpeed mps="1.5" name="Flau vind" />
         <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1021.2" />
+        <pressure unit="hPa" value="1023.4" />
       </time>
       <time from="2016-04-12T08:00:00" to="2016-04-12T14:00:00" period="1">
         <!-- Valid from 2016-04-12T08:00:00 to 2016-04-12T14:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-12T08:00:00 -->
-        <windDirection deg="75.9" code="ENE" name="Øst-nordøst" />
-        <windSpeed mps="1.2" name="Flau vind" />
+        <windDirection deg="218.3" code="SW" name="Sørvest" />
+        <windSpeed mps="1.4" name="Flau vind" />
         <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1019.3" />
+        <pressure unit="hPa" value="1020.7" />
       </time>
       <time from="2016-04-12T14:00:00" to="2016-04-12T20:00:00" period="2">
         <!-- Valid from 2016-04-12T14:00:00 to 2016-04-12T20:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-12T14:00:00 -->
-        <windDirection deg="298.4" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="1.4" name="Flau vind" />
-        <temperature unit="celsius" value="11" />
-        <pressure unit="hPa" value="1017.5" />
+        <windDirection deg="36.8" code="NE" name="Nordøst" />
+        <windSpeed mps="1.2" name="Flau vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1017.1" />
       </time>
       <time from="2016-04-12T20:00:00" to="2016-04-13T02:00:00" period="3">
         <!-- Valid from 2016-04-12T20:00:00 to 2016-04-13T02:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.17" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-12T20:00:00 -->
-        <windDirection deg="355.6" code="N" name="Nord" />
-        <windSpeed mps="2.3" name="Svak vind" />
-        <temperature unit="celsius" value="9" />
-        <pressure unit="hPa" value="1015.5" />
+        <windDirection deg="46.7" code="NE" name="Nordøst" />
+        <windSpeed mps="1.9" name="Svak vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1014.8" />
       </time>
       <time from="2016-04-13T02:00:00" to="2016-04-13T08:00:00" period="0">
         <!-- Valid from 2016-04-13T02:00:00 to 2016-04-13T08:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.20" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-13T02:00:00 -->
-        <windDirection deg="355.9" code="N" name="Nord" />
-        <windSpeed mps="1.7" name="Svak vind" />
-        <temperature unit="celsius" value="3" />
-        <pressure unit="hPa" value="1013.8" />
+        <windDirection deg="152.2" code="SSE" name="Sør-sørøst" />
+        <windSpeed mps="1.6" name="Svak vind" />
+        <temperature unit="celsius" value="4" />
+        <pressure unit="hPa" value="1012.8" />
       </time>
       <time from="2016-04-13T08:00:00" to="2016-04-13T14:00:00" period="1">
         <!-- Valid from 2016-04-13T08:00:00 to 2016-04-13T14:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-13T08:00:00 -->
-        <windDirection deg="326.1" code="NW" name="Nordvest" />
-        <windSpeed mps="1.4" name="Flau vind" />
-        <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1012.1" />
+        <windDirection deg="31.3" code="NNE" name="Nord-nordøst" />
+        <windSpeed mps="1.3" name="Flau vind" />
+        <temperature unit="celsius" value="3" />
+        <pressure unit="hPa" value="1011.3" />
       </time>
       <time from="2016-04-13T14:00:00" to="2016-04-13T20:00:00" period="2">
         <!-- Valid from 2016-04-13T14:00:00 to 2016-04-13T20:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-13T14:00:00 -->
-        <windDirection deg="283.5" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="1.5" name="Flau vind" />
-        <temperature unit="celsius" value="9" />
-        <pressure unit="hPa" value="1011.3" />
+        <windDirection deg="351.2" code="N" name="Nord" />
+        <windSpeed mps="1.6" name="Svak vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1010.0" />
       </time>
       <time from="2016-04-13T20:00:00" to="2016-04-14T02:00:00" period="3">
         <!-- Valid from 2016-04-13T20:00:00 to 2016-04-14T02:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.20" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-13T20:00:00 -->
-        <windDirection deg="327.0" code="NNW" name="Nord-nordvest" />
+        <windDirection deg="146.6" code="SSE" name="Sør-sørøst" />
         <windSpeed mps="2.0" name="Svak vind" />
-        <temperature unit="celsius" value="8" />
-        <pressure unit="hPa" value="1010.2" />
+        <temperature unit="celsius" value="6" />
+        <pressure unit="hPa" value="1009.3" />
       </time>
       <time from="2016-04-14T02:00:00" to="2016-04-14T08:00:00" period="0">
         <!-- Valid from 2016-04-14T02:00:00 to 2016-04-14T08:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.23" />
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-14T02:00:00 -->
-        <windDirection deg="113.7" code="ESE" name="Øst-sørøst" />
-        <windSpeed mps="1.7" name="Svak vind" />
+        <windDirection deg="106.2" code="ESE" name="Øst-sørøst" />
+        <windSpeed mps="2.0" name="Svak vind" />
         <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1009.8" />
+        <pressure unit="hPa" value="1008.7" />
       </time>
       <time from="2016-04-14T08:00:00" to="2016-04-14T14:00:00" period="1">
         <!-- Valid from 2016-04-14T08:00:00 to 2016-04-14T14:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-14T08:00:00 -->
-        <windDirection deg="239.7" code="WSW" name="Vest-sørvest" />
-        <windSpeed mps="1.6" name="Svak vind" />
+        <windDirection deg="128.5" code="SE" name="Sørøst" />
+        <windSpeed mps="2.1" name="Svak vind" />
         <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1010.1" />
+        <pressure unit="hPa" value="1008.8" />
       </time>
       <time from="2016-04-14T14:00:00" to="2016-04-14T20:00:00" period="2">
         <!-- Valid from 2016-04-14T14:00:00 to 2016-04-14T20:00:00 -->
         <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-14T14:00:00 -->
-        <windDirection deg="135.7" code="SE" name="Sørøst" />
-        <windSpeed mps="2.2" name="Svak vind" />
-        <temperature unit="celsius" value="8" />
-        <pressure unit="hPa" value="1008.3" />
+        <windDirection deg="305.5" code="NW" name="Nordvest" />
+        <windSpeed mps="2.3" name="Svak vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1008.4" />
       </time>
       <time from="2016-04-14T20:00:00" to="2016-04-15T02:00:00" period="3">
         <!-- Valid from 2016-04-14T20:00:00 to 2016-04-15T02:00:00 -->
-        <symbol number="3" numberEx="3" name="Delvis skyet" var="mf/03n.23" />
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-14T20:00:00 -->
-        <windDirection deg="287.5" code="WNW" name="Vest-nordvest" />
-        <windSpeed mps="2.2" name="Svak vind" />
-        <temperature unit="celsius" value="7" />
-        <pressure unit="hPa" value="1009.5" />
+        <windDirection deg="169.2" code="S" name="Sør" />
+        <windSpeed mps="2.4" name="Svak vind" />
+        <temperature unit="celsius" value="6" />
+        <pressure unit="hPa" value="1007.9" />
       </time>
       <time from="2016-04-15T02:00:00" to="2016-04-15T08:00:00" period="0">
         <!-- Valid from 2016-04-15T02:00:00 to 2016-04-15T08:00:00 -->
         <symbol number="4" numberEx="4" name="Skyet" var="04" />
         <precipitation value="0" />
         <!-- Valid at 2016-04-15T02:00:00 -->
-        <windDirection deg="258.8" code="W" name="Vest" />
-        <windSpeed mps="1.7" name="Svak vind" />
+        <windDirection deg="301.5" code="WNW" name="Vest-nordvest" />
+        <windSpeed mps="1.8" name="Svak vind" />
         <temperature unit="celsius" value="4" />
-        <pressure unit="hPa" value="1008.8" />
+        <pressure unit="hPa" value="1008.5" />
+      </time>
+      <time from="2016-04-15T08:00:00" to="2016-04-15T14:00:00" period="1">
+        <!-- Valid from 2016-04-15T08:00:00 to 2016-04-15T14:00:00 -->
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
+        <precipitation value="0" />
+        <!-- Valid at 2016-04-15T08:00:00 -->
+        <windDirection deg="119.1" code="ESE" name="Øst-sørøst" />
+        <windSpeed mps="1.4" name="Flau vind" />
+        <temperature unit="celsius" value="4" />
+        <pressure unit="hPa" value="1008.5" />
+      </time>
+      <time from="2016-04-15T14:00:00" to="2016-04-15T20:00:00" period="2">
+        <!-- Valid from 2016-04-15T14:00:00 to 2016-04-15T20:00:00 -->
+        <symbol number="3" numberEx="3" name="Delvis skyet" var="03d" />
+        <precipitation value="0" />
+        <!-- Valid at 2016-04-15T14:00:00 -->
+        <windDirection deg="359.7" code="N" name="Nord" />
+        <windSpeed mps="1.9" name="Svak vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1008.5" />
+      </time>
+      <time from="2016-04-15T20:00:00" to="2016-04-16T02:00:00" period="3">
+        <!-- Valid from 2016-04-15T20:00:00 to 2016-04-16T02:00:00 -->
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
+        <precipitation value="0" />
+        <!-- Valid at 2016-04-15T20:00:00 -->
+        <windDirection deg="314.2" code="NW" name="Nordvest" />
+        <windSpeed mps="1.9" name="Svak vind" />
+        <temperature unit="celsius" value="7" />
+        <pressure unit="hPa" value="1008.2" />
+      </time>
+      <time from="2016-04-16T02:00:00" to="2016-04-16T08:00:00" period="0">
+        <!-- Valid from 2016-04-16T02:00:00 to 2016-04-16T08:00:00 -->
+        <symbol number="4" numberEx="4" name="Skyet" var="04" />
+        <precipitation value="0" />
+        <!-- Valid at 2016-04-16T02:00:00 -->
+        <windDirection deg="2.4" code="N" name="Nord" />
+        <windSpeed mps="2.0" name="Svak vind" />
+        <temperature unit="celsius" value="4" />
+        <pressure unit="hPa" value="1009.7" />
       </time>
     </tabular>
   </forecast>
   <observations>
-    <weatherstation stno="68860" sttype="eklima" name="Trondheim (Voll)" distance="2699" lat="63.41070" lon="10.45380" source="Meteorologisk Institutt">
-      <symbol number="15" name="Tåke" time="2016-04-06T06:00:00Z" />
-      <temperature unit="celsius" value="3.9" time="2016-04-06T08:00:00Z" />
-      <windDirection deg="21.0" code="NNE" name="Nord-nordøst" time="2016-04-06T08:40:00Z" />
-      <windSpeed mps="0.5" name="Flau vind" time="2016-04-06T08:40:00Z" />
+    <weatherstation stno="68860" sttype="eklima" name="Trondheim (Voll)" distance="2495" lat="63.41070" lon="10.45380" source="Meteorologisk Institutt">
+      <symbol number="46" name="Lett regn" time="2016-04-07T06:00:00Z" />
+      <temperature unit="celsius" value="4.5" time="2016-04-07T08:00:00Z" />
+      <windDirection deg="242.0" code="WSW" name="Vest-sørvest" time="2016-04-07T08:40:00Z" />
+      <windSpeed mps="3.2" name="Svak vind" time="2016-04-07T08:40:00Z" />
     </weatherstation>
-    <weatherstation stno="67140" sttype="eklima" name="Skjetlein" distance="8421" lat="63.34030" lon="10.29730" source="Meteorologisk Institutt">
-      <temperature unit="celsius" value="2.7" time="2016-04-06T08:00:00Z" />
+    <weatherstation stno="67140" sttype="eklima" name="Skjetlein" distance="10064" lat="63.34030" lon="10.29730" source="Meteorologisk Institutt">
+      <temperature unit="celsius" value="4.4" time="2016-04-07T08:00:00Z" />
     </weatherstation>
-    <weatherstation stno="69655" sttype="eklima" name="Frosta" distance="23494" lat="63.56570" lon="10.69400" source="Meteorologisk Institutt">
-      <temperature unit="celsius" value="4.7" time="2016-04-06T08:00:00Z" />
+    <weatherstation stno="69655" sttype="eklima" name="Frosta" distance="21904" lat="63.56570" lon="10.69400" source="Meteorologisk Institutt">
+      <temperature unit="celsius" value="5.7" time="2016-04-07T08:00:00Z" />
     </weatherstation>
   </observations>
 </weatherdata>

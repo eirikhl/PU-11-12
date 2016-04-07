@@ -12,11 +12,15 @@ public class WeatherToCoefficient implements SensorInterface{
     private XmlParser parser;
 
     @SuppressWarnings("OctalInteger")
-    public WeatherToCoefficient() throws IOException {
+    public WeatherToCoefficient()  {
         postalNumber = 7034;
         coefficient = 0.8f;
         ticks = 0;
-        XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+        try {
+            XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setAuto(boolean auto) {
@@ -57,11 +61,15 @@ public class WeatherToCoefficient implements SensorInterface{
     public void update(){
         ticks += 1;
         if (ticks == 864000){
-            XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+            try {
+                XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             ticks = 0;
         }
         else if (ticks % 72000 == 0){
-            setCoefficient(XmlParser.parse()); Må fikses når xmlparser er ferdig
+            setCoefficient(XmlParser.parse()); //Må fikses når xmlparser er ferdig
         }
     }
 
