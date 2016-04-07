@@ -51,6 +51,12 @@ public class XmlParser {
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
         }
 
 
