@@ -1,15 +1,17 @@
 package Sensors;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 
 public class XmlDownload {
     String url;
-    /*public XmlDownload(String url){
+    public XmlDownload(String url){
         this.url = url;
-    }*/
+    }
     /*public void download(){
         InputStream stream = url.openStream();
         Document doc = docBuilder.parse(stream);
@@ -46,12 +48,6 @@ public class XmlDownload {
         return sResponse;
     }
 
-    /*public static void main(String[] args) {
-        String str = "http://www.yr.no/sted/Norge/postnummer/7037/varsel.xml";
-        XmlDownload xml = new XmlDownload(str);
-        String s = xml.getURLContent(xml.url);
-        System.out.println(s);
-    }
-    */
+
 }
 
