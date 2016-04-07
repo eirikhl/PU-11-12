@@ -51,6 +51,7 @@ public class Main{
             Thread.sleep(25);
             if(i%50 == 1){
                 safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
+
                 if(! safe){
                     System.out.println("You should break");
                 }
