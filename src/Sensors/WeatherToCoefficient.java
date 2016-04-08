@@ -68,13 +68,14 @@ public class WeatherToCoefficient implements SensorInterface{
         if (ticks == 864000){
             try {
                 XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+                setCoefficient(XmlParser.parse());
             } catch (IOException e) {
                 e.printStackTrace();
             }
             ticks = 0;
         }
         else if (ticks % 72000 == 0){
-            setCoefficient(XmlParser.parse()); //Må fikses når xmlparser er ferdig
+            setCoefficient(XmlParser.parse());
         }
     }
 
