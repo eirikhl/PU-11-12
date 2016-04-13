@@ -21,7 +21,7 @@ package Sensors;
      *
      * @author Rutger Claes <rutger.claes@cs.kuleuven.be>
      */
-    public class DistanceMonitor {
+    public class DistanceMonitor implements SensorInterface{
 
         private final static float SOUND_SPEED = 340.29f;  // speed of sound in m/s
 

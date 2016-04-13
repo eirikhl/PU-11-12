@@ -1,9 +1,9 @@
 package main;
 
-import src.Sensors.DistanceMonitor;
-import src.Sensors.FileReading;
-import src.Sensors.SensorInterface;
-import src.Sensors.WeatherToCoefficient;
+import Sensors.DistanceMonitor;
+import Sensors.FileReading;
+import Sensors.SensorInterface;
+import Sensors.WeatherToCoefficient;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -16,6 +16,8 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.Pin;
 import com.pi4j.io.gpio.RaspiPin;
 
+
+
 public class Penguin {
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
@@ -23,12 +25,18 @@ public class Penguin {
     WeatherToCoefficient w;
     FileReading fr;
 
+    private final GpioPinDigitalOutput ledPin;
+
+
     public Penguin(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
         values = new HashMap<>();
         d = new DistanceMonitor(RaspiPin.GPIO_00, RaspiPin.GPIO_07);
+        this.ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_12);
+        this.ledPin.low();
         w = new WeatherToCoefficient();
         fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
+
 
         sensors.add(d);
         sensors.add(w);
@@ -50,7 +58,7 @@ public class Penguin {
 
     public static void main(String [] args) throws FileNotFoundException, InterruptedException{
         boolean safe;
-        Penguin m = new Penguin("src/dataInput/downtown-crosstown.json");
+        Penguin m = new Penguin("dataInput/downtown-crosstown.json");
         int i = 0;
         while(true){
             i++;
@@ -61,6 +69,10 @@ public class Penguin {
 //                System.out.println("V->"+m.getVelocity()+ "D->"m.getDistance()+ "W_>"+m.getWeather());
                 if(! safe){
                     System.out.println("You should break");
+                    m.ledPin.high();
+                }
+                else{
+                    m.ledPin.low();
                 }
             }
             if(i >= 350000){
