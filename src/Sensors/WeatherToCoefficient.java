@@ -67,7 +67,7 @@ public class WeatherToCoefficient implements SensorInterface{
         ticks += 1;
         if (ticks == 864000){
             try {
-                XmlParser.download("http://www.yr.no/sted/Norge/postnummer/"+postalNumber+"/varsel.xml");
+                XmlParser.download("http://www.yr.no/sted/Norge/postnummer/" + postalNumber + "/varsel.xml");
                 setCoefficient(XmlParser.parse());
             } catch (IOException e) {
                 e.printStackTrace();

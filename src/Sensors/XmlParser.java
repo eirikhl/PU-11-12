@@ -29,19 +29,13 @@ public class XmlParser {
         try {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse("src/Sensors/verdata.xml");
-//            Document doc = builder.parse(xmlString);
             doc.getDocumentElement().normalize();
-            System.out.println("Root element: "
-                    + doc.getDocumentElement().getNodeName());
             XPath xPath = XPathFactory.newInstance().newXPath();
 
             String expression = ("/weatherdata/forecast/tabular/time");
-
             NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-
             Node nNode = nodeList.item(0);
 
-            System.out.println("\nCurrent Element: "+nNode.getNodeName());
             if(nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element eElement = (Element) nNode;
                 prec = Float.parseFloat(eElement.getElementsByTagName("precipitation").item(0).getAttributes().getNamedItem("value").getTextContent());
@@ -59,7 +53,6 @@ public class XmlParser {
         } catch (SAXException e) {
             e.printStackTrace();
         }
-
 
         float[] list = {temp, prec};
         System.out.println(list[0] + " " + list[1]);

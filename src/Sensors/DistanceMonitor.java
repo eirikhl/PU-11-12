@@ -100,23 +100,15 @@ package Sensors;
             }
             long end = System.nanoTime();
 
-            if( countdown <= 0 ) {
-                //throw new TimeoutException( "Timeout waiting for signal end" );
-            }
-
             return (long)Math.ceil( ( end - start ) / 1000.0 );  // Return micro seconds
         }
 
         public void update() {
-            //Pin echoPin = RaspiPin.GPIO_00; // PI4J custom numbering (pin 11)
-            //Pin trigPin = RaspiPin.GPIO_07; // PI4J custom numbering (pin 7)
-            //DistanceMonitor monitor = new DistanceMonitor( echoPin, trigPin );
             try {
                 distanceInCm = measureDistance();
-                // System.out.printf( "%1$d,%2$.3f%n", System.currentTimeMillis(), monitor.measureDistance() );
             }
             catch( TimeoutException e ) {
-                System.err.println( e );
+                distanceInCm = -1;
             }
             try {
                 Thread.sleep( WAIT_DURATION_IN_MILLIS );

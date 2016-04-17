@@ -16,8 +16,6 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.Pin;
 import com.pi4j.io.gpio.RaspiPin;
 
-
-
 public class Penguin {
     ArrayList<SensorInterface> sensors;
     HashMap<SensorInterface, Float> values;
@@ -28,15 +26,15 @@ public class Penguin {
     GpioController gpio = GpioFactory.getInstance();
     GpioPinDigitalOutput ledPin;
 
-
     public Penguin(String filename) throws FileNotFoundException {
+        ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "pinLED", Pinstate.LOW); //pin nr 13
+
         sensors = new ArrayList<>();
         values = new HashMap<>();
+
         d = new DistanceMonitor(RaspiPin.GPIO_00, RaspiPin.GPIO_07);
-        ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "pinLED", Pinstate.LOW); //pin nr 13
         w = new WeatherToCoefficient();
         fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
-
 
         sensors.add(d);
         sensors.add(w);
@@ -46,8 +44,6 @@ public class Penguin {
         values.put(w, 0.0f);
         values.put(fr, 0.0f);
     }
-
-
 
     public void update(){
         for (SensorInterface sensor : sensors) {
@@ -66,7 +62,6 @@ public class Penguin {
             Thread.sleep(25);
             if(i%50 == 1){
                 safe = isSafe(m.getVelocity(), m.getDistance(), m.getWeather());
-//                System.out.println("V->"+m.getVelocity()+ "D->"m.getDistance()+ "W_>"+m.getWeather());
                 if(! safe){
                     System.out.println("You should break");
                     m.ledPin.high();
@@ -81,7 +76,7 @@ public class Penguin {
         }
     }
 
-    //method returns breaking distance
+    // method returns breaking distance
     // velocity in m/s  In function- call: write weather condition or get weather data
     public static float breakDistance(float velocity, float condition){
         double gravity = 9.81;
