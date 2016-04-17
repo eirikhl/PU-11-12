@@ -101,7 +101,7 @@ package Sensors;
             long end = System.nanoTime();
 
             if( countdown <= 0 ) {
-                throw new TimeoutException( "Timeout waiting for signal end" );
+                //throw new TimeoutException( "Timeout waiting for signal end" );
             }
 
             return (long)Math.ceil( ( end - start ) / 1000.0 );  // Return micro seconds

@@ -25,15 +25,15 @@ public class Penguin {
     WeatherToCoefficient w;
     FileReading fr;
 
-    private final GpioPinDigitalOutput ledPin;
+    GpioController gpio = GpioFactory.getInstance();
+    GpioPinDigitalOutput ledPin;
 
 
     public Penguin(String filename) throws FileNotFoundException {
         sensors = new ArrayList<>();
         values = new HashMap<>();
         d = new DistanceMonitor(RaspiPin.GPIO_00, RaspiPin.GPIO_07);
-        this.ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_12);
-        this.ledPin.low();
+        ledPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "pinLED", Pinstate.LOW); //pin nr 13
         w = new WeatherToCoefficient();
         fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
 
