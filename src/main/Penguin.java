@@ -1,9 +1,6 @@
 package main;
 
-import Sensors.DistanceMonitor;
-import Sensors.FileReading;
-import Sensors.SensorInterface;
-import Sensors.WeatherToCoefficient;
+import Sensors.*;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -21,7 +18,8 @@ public class Penguin {
     HashMap<SensorInterface, Float> values;
     DistanceMonitor d;
     WeatherToCoefficient w;
-    FileReading fr;
+//    FileReading fr;
+    MockSpeed fr;
 
     GpioController gpio = GpioFactory.getInstance();
     GpioPinDigitalOutput ledPin;
@@ -34,7 +32,8 @@ public class Penguin {
 
         d = new DistanceMonitor(RaspiPin.GPIO_00, RaspiPin.GPIO_07);
         w = new WeatherToCoefficient();
-        fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
+//        fr = new FileReading(filename, "vehicle_speed"); // The string defines what the object will be looking for
+        fr = new MockSpeed();
 
         sensors.add(d);
         sensors.add(w);
